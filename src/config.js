@@ -4,7 +4,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const corsOptions = {
   origin: [
     'https://copyxpert-frontend.vercel.app',
-    'http://localhost:3001'
+    'http://localhost:3000'
   ],
   optionsSuccessStatus: 200,
   credentials: true
