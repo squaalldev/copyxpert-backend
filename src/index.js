@@ -1,11 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const helmet = require('helmet');
 const { corsOptions, model } = require('./config');
 
 const app = express();
-
-app.use(helmet());
 app.use(cors(corsOptions));
 app.use(express.json());
 
