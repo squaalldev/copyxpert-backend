@@ -11,6 +11,6 @@ if (!process.env.GEMINI_API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getModel('gemini-pro');
+const model = genAI.getModel('gemini-2.0-flash');
 
 module.exports = { model, corsOptions };
