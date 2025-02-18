@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const { corsOptions } = require('./config');
-const apiRouter = require('./api');
+const apiRouter = require('../backend/api');
 
 const app = express();
 
