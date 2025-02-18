@@ -5,8 +5,10 @@ const multer = require('multer');
 const { corsOptions, model, SYSTEM_PROMPT } = require('./config');
 
 const app = express();
-app.use(helmet());
+
+// Configurar middlewares en el orden correcto
 app.use(cors(corsOptions));
+app.use(helmet());
 app.use(express.json());
 
 // Configurar multer para manejar archivos
@@ -71,6 +73,10 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
   }
 });
 
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
