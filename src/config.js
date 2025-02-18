@@ -1,8 +1,12 @@
 require('dotenv').config();
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
+// Actualizar las opciones de CORS para permitir el dominio de Vercel
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: [
+    'https://copyxpert-frontend.vercel.app',
+    'http://localhost:3000' // mantener para desarrollo local
+  ],
   optionsSuccessStatus: 200,
   credentials: true
 };
